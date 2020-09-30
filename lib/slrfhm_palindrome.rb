@@ -4,14 +4,19 @@ module Slrfhm_Palindrome
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
-    processed_content == processed_content.reverse
+    if processed_content.nil? || processed_content.empty?
+      #puts "empty"
+      false
+    else
+      processed_content == processed_content.reverse
+    end 
   end
 
   private
 
     # Returns content for palindrome testing.
     def processed_content
-      to_s.scan(/[a-z0-9]/i).join.downcase
+       to_s.scan(/[a-z0-9]/i).join.downcase
     end
 end
 

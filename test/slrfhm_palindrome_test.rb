@@ -34,6 +34,17 @@ class SlrfhmPalindromeTest < Minitest::Test
     refute 12345.palindrome?
   end
 
+  def test_spaces_are_not_palindrome
+    refute "  ".palindrome?
+  end
+
+  def test_empty_string_not_palindrome
+    refute "".palindrome?
+  end
+  
+  
+
+
 
 end
 
